@@ -15,8 +15,8 @@ if name:
     jogador = df[pesquisa]
 
     if not jogador.empty:
-        st.write("###Estatistica do {name}")
-        st.dataframe(jogador)
+        st.write("###Estatistica do ${name}")
+        st.dataframe(df["player_name"], on_select="rerun")
     else:
         st.write("Jogador não encontrado")
 
